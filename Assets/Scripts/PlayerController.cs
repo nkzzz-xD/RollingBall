@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void OnMove(InputValue movementValue)
     {
-        Vector2 movement = momentumValue.Get<Vector2>();
+        Vector2 movement = movementValue.Get<Vector2>();
         movementX = movementVector.x;
         movementY = movementVector.y;
     }

@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 public class PlayerController : MonoBehaviour
 {
-    public float speed = 0;
+    public float speed = 5;
     private Rigidbody rb;
     private float movementX;
     private float movementY;

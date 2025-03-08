@@ -24,5 +24,11 @@ public class move : MonoBehaviour
         if (Input.GetKey(KeyCode.DownArrow)) {
             thisObj.transform.Rotate(-360 * Time.deltaTime,0, 0);
         }
+        if (Input.GetKey(KeyCode.W)) {
+            thisObj.transform.localScale = new Vector3(thisObj.transform.localScale.x + 40 * Time.deltaTime, thisObj.transform.localScale.y, thisObj.transform.localScale.z);
+        }
+        if (Input.GetKey(KeyCode.S)) {
+            thisObj.transform.localScale = new Vector3(thisObj.transform.localScale.x - 40 * Time.deltaTime, thisObj.transform.localScale.y, thisObj.transform.localScale.z);
+        }
     }
 }

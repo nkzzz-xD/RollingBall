@@ -1,7 +1,7 @@
-using UnityEngine;
-using UnityEngine.InputSystem;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.InputSystem;
 
 
 public class PlayerController : MonoBehaviour
@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void OnMove(InputValue movementValue)
     {
-        Vector2 movement = movementValue.Get<Vector2>();
+        Vector2 movementVector = movementValue.Get<Vector2>();
         movementX = movementVector.x;
         movementY = movementVector.y;
     }
@@ -28,6 +28,6 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate(InputValue movementValue)
     {
         Vector3 movement = new Vector3(movementX, 0.0f, movementY);
-        rb.addForce(movement * speed);
+        rb.AddForce(movement * speed);
     }
 }
